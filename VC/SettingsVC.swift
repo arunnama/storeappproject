@@ -26,6 +26,7 @@ class SettingsVC: UITableViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       
         if segue.identifier == "circleColor"{
+            print(segue.identifier)
             segue.destination.navigationItem.title = "Select your color"
             segue.destination.navigationItem.backBarButtonItem?.title = "Settings"
             segue.destination.navigationItem.hidesBackButton = false;
