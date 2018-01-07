@@ -30,8 +30,11 @@
 		C9261E141FE435DD00B2B8EB /* cat.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9261E111FE435DC00B2B8EB /* cat.wav */; };
 		C9261E151FE435DD00B2B8EB /* dog.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9261E121FE435DC00B2B8EB /* dog.wav */; };
 		C9261E161FE435DD00B2B8EB /* empty.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9261E131FE435DC00B2B8EB /* empty.wav */; };
+		C9AE50291FF7FA3F00DB051A /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE50281FF7FA3F00DB051A /* MainNavigationController.swift */; };
 		C9B10C2C1FF0083800829D2E /* MusicTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B10C2B1FF0083800829D2E /* MusicTypes.swift */; };
 		C9DE5F8C1FE5054D00AA3929 /* ColorPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE5F8B1FE5054D00AA3929 /* ColorPickerVC.swift */; };
+		C9FA38DA1FFD4091000B0BEF /* SquareColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA38D81FFD4090000B0BEF /* SquareColorViewController.swift */; };
+		C9FA38DB1FFD4091000B0BEF /* BrandColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA38D91FFD4091000B0BEF /* BrandColorViewController.swift */; };
 		E9079E2690E2532E2E6CC589 /* Pods_SleepMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 142BAB807C54FE184D46C77A /* Pods_SleepMe.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,8 +90,11 @@
 		C9261E111FE435DC00B2B8EB /* cat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cat.wav; sourceTree = "<group>"; };
 		C9261E121FE435DC00B2B8EB /* dog.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dog.wav; sourceTree = "<group>"; };
 		C9261E131FE435DC00B2B8EB /* empty.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = empty.wav; sourceTree = "<group>"; };
+		C9AE50281FF7FA3F00DB051A /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		C9B10C2B1FF0083800829D2E /* MusicTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTypes.swift; sourceTree = "<group>"; };
 		C9DE5F8B1FE5054D00AA3929 /* ColorPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerVC.swift; sourceTree = "<group>"; };
+		C9FA38D81FFD4090000B0BEF /* SquareColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareColorViewController.swift; sourceTree = "<group>"; };
+		C9FA38D91FFD4091000B0BEF /* BrandColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandColorViewController.swift; sourceTree = "<group>"; };
 		DAF193633AB426782F71FF03 /* Pods-SleepMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepMeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepMeUITests/Pods-SleepMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F95C88047D025935E1438CE1 /* Pods_SleepMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -212,11 +218,14 @@
 		C9261E031FE4080900B2B8EB /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				C9FA38D91FFD4091000B0BEF /* BrandColorViewController.swift */,
+				C9FA38D81FFD4090000B0BEF /* SquareColorViewController.swift */,
 				C9261E0E1FE434A400B2B8EB /* ViewController.swift */,
 				C9261DD11FE404C200B2B8EB /* HomeVC.swift */,
 				C9261E041FE410EE00B2B8EB /* SettingsVC.swift */,
 				C9DE5F8B1FE5054D00AA3929 /* ColorPickerVC.swift */,
 				C9B10C2B1FF0083800829D2E /* MusicTypes.swift */,
+				C9AE50281FF7FA3F00DB051A /* MainNavigationController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -481,6 +490,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SleepMe/Pods-SleepMe-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/ChromaColorPicker/ChromaColorPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/IGColorPicker/IGColorPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/M13Checkbox/M13Checkbox.framework",
 				"${BUILT_PRODUCTS_DIR}/Pulsator/Pulsator.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftySound/SwiftySound.framework",
 			);
@@ -488,6 +499,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChromaColorPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGColorPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13Checkbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pulsator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftySound.framework",
 			);
@@ -551,12 +564,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9FA38DA1FFD4091000B0BEF /* SquareColorViewController.swift in Sources */,
 				C9261DD21FE404C200B2B8EB /* HomeVC.swift in Sources */,
 				C9261E0B1FE416E100B2B8EB /* Music.xcdatamodeld in Sources */,
 				C9261E081FE4112C00B2B8EB /* Settings.swift in Sources */,
+				C9AE50291FF7FA3F00DB051A /* MainNavigationController.swift in Sources */,
 				C9261E0F1FE434A400B2B8EB /* ViewController.swift in Sources */,
 				C9261E0D1FE4179D00B2B8EB /* AppData.swift in Sources */,
 				C9B10C2C1FF0083800829D2E /* MusicTypes.swift in Sources */,
+				C9FA38DB1FFD4091000B0BEF /* BrandColorViewController.swift in Sources */,
 				C9261E011FE4078D00B2B8EB /* LFTPulseAnimation.swift in Sources */,
 				C9DE5F8C1FE5054D00AA3929 /* ColorPickerVC.swift in Sources */,
 				C9261DD81FE404C200B2B8EB /* SleepMe.xcdatamodeld in Sources */,
@@ -664,7 +680,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -715,7 +731,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

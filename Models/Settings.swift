@@ -15,5 +15,4 @@ class Settings{
     var bgColour : UIColor = FlatRed();
     var bgMusic = AppData.musicTypes();
     var pulseSettings : LFTPulseAnimation?
-    
 }

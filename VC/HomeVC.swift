@@ -8,12 +8,13 @@
 
 import UIKit
 import SwiftySound
-
-class HomeVC: UIViewController {
+class HomeVC: UIViewController,homeBgColor {
 
     var mainPulse : LFTPulseAnimation?;
     var innerPulse : LFTPulseAnimation?;
     var isSoundOn : Bool = false;
+    var bgMusic: UIColor
+   
     private var bgMusic: Sound?
     override func loadView(){
         super.loadView()
@@ -115,12 +116,12 @@ class HomeVC: UIViewController {
     }
     @objc func doubleTapHandler()
     {
-        let settingsVC:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingsVC") as UIViewController
-        //self.present(viewController, animated: false, completion: nil)
-        navigationController?.pushViewController(settingsVC, animated: true)
+        let mainNavController: MainNavigationController  = storyboard?.instantiateViewController(withIdentifier: "MainNavigationController") as! MainNavigationController
+        present(mainNavController, animated: true, completion: nil)
  
     }
-    
+   
+    /*
     func initializeGestureRecognizer(actionView:UIView)
     {
         //Tap Gesture
@@ -142,7 +143,7 @@ class HomeVC: UIViewController {
         actionView.addGestureRecognizer(panGesture)
         
     }
-    
+    */
 
 }
 

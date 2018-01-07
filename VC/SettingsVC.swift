@@ -14,8 +14,17 @@ class SettingsVC: UITableViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let backItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(goHomePage))
+        navigationItem.rightBarButtonItem = backItem
+       
         
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func goHomePage()
+    {
+        navigationController?.dismiss(animated: true, completion: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,13 +32,21 @@ class SettingsVC: UITableViewController{
         // Dispose of any resources that can be recreated.
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       
         if segue.identifier == "circleColor"{
-            print(segue.identifier)
+          
             segue.destination.navigationItem.title = "Select your color"
             segue.destination.navigationItem.backBarButtonItem?.title = "Settings"
             segue.destination.navigationItem.hidesBackButton = false;
+            
+           
+        }
+        
+        if (segue.identifier == "circleColor") {
+            var  vc:UIViewController = segue.destination as! ColorPickerVC
+            vc.navigationItem.hidesBackButton = false;
         }
         if segue.identifier == "bgMusic"{
             segue.destination.navigationItem.title = "Select your music"

@@ -8,34 +8,40 @@
 
 import UIKit
 import ChromaColorPicker
+import IGColorPicker
 
-class ColorPickerVC: UIViewController,ChromaColorPickerDelegate{
 
+class ColorPickerVC: UIViewController, ColorPickerViewDelegate, ColorPickerViewDelegateFlowLayout{
+
+    @IBOutlet weak var colorPickerView: ColorPickerView!
     @IBOutlet weak var colorPic: UIView!
    
     override func viewDidLoad() {
-       
         super.viewDidLoad()
-       
-        // Do any additional setup after loading the view.
+        colorPic.backgroundColor = UIColor.red
+        colorPickerView.delegate = self
+        colorPickerView.layoutDelegate = self
+        colorPickerView.style = .circle
+        colorPickerView.selectionStyle = .check
+        colorPickerView.isSelectedColorTappable = false
+        colorPickerView.preselectedIndex = colorPickerView.colors.indices.first
+        
+        view.backgroundColor = colorPickerView.colors.first
     }
-
 
     override func viewWillAppear(_ animated: Bool) {
          super.viewWillAppear(animated);
-         addColorPicker()
+         self.navigationController?.isNavigationBarHidden = false;
+        // addColorPicker()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    
+    /*
     func addColorPicker()
     {
-        
         let ColorPicker = ChromaColorPicker(frame:colorPic.frame)
         print(ColorPicker.center)
         ColorPicker.delegate = self
@@ -43,14 +49,12 @@ class ColorPickerVC: UIViewController,ChromaColorPickerDelegate{
         ColorPicker.padding = 5
         ColorPicker.stroke = 3
         ColorPicker.hexLabel.textColor = UIColor.white
-        
         colorPic.addSubview(ColorPicker)
     }
+ */
     
     func colorPickerDidChooseColor(_ colorPicker: ChromaColorPicker, color: UIColor){
-        
-        self.view.backgroundColor = color;
-        
+       self.view.backgroundColor = color
     }
     
     
@@ -63,5 +67,32 @@ class ColorPickerVC: UIViewController,ChromaColorPickerDelegate{
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
+    // MARK: - ColorPickerViewDelegate
+    
+    func colorPickerView(_ colorPickerView: ColorPickerView, didSelectItemAt indexPath: IndexPath) {
+       // self.selectedColorView.backgroundColor = colorPickerView.colors[indexPath.item]
+        self.view.backgroundColor = colorPickerView.colors[indexPath.item]
+    }
+    
+    // MARK: - ColorPickerViewDelegateFlowLayout
+    
+    func colorPickerView(_ colorPickerView: ColorPickerView, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 48, height: 48)
+    }
+    
+    func colorPickerView(_ colorPickerView: ColorPickerView, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 11
+    }
+    
+    func colorPickerView(_ colorPickerView: ColorPickerView, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 8
+    }
+    
+    func colorPickerView(_ colorPickerView: ColorPickerView, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+    }
 
 }
