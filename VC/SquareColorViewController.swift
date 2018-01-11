@@ -39,6 +39,7 @@ class SquareColorPickerViewController: UIViewController, ColorPickerViewDelegate
     
     func colorPickerView(_ colorPickerView: ColorPickerView, didSelectItemAt indexPath: IndexPath) {
         self.view.backgroundColor = colorPickerView.colors[indexPath.item]
+        Settings.sharedInstance.bgColour = colorPickerView.colors[indexPath.item]
     }
     
     

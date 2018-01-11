@@ -45,6 +45,7 @@ class BrandColorViewController: UIViewController, ColorPickerViewDelegate, Color
     
     func colorPickerView(_ colorPickerView: ColorPickerView, didSelectItemAt indexPath: IndexPath) {
         self.selectedColorView.backgroundColor = colorPickerView.colors[indexPath.item]
+        Settings.sharedInstance.bgColour = colorPickerView.colors[indexPath.item]
     }
     
     // MARK: - ColorPickerViewDelegateFlowLayout

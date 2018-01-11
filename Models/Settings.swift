@@ -11,8 +11,13 @@ import UIKit
 import AVFoundation
 import ChameleonFramework
 
-class Settings{
-    var bgColour : UIColor = FlatRed();
-    var bgMusic = AppData.musicTypes();
+final class Settings
+{
+    static let sharedInstance = Settings()
+    var bgColour : UIColor = FlatSkyBlueDark()
+    var bgMusic:String = AppData.musicTypes()[0]
     var pulseSettings : LFTPulseAnimation?
+    
+    private init(){}
+    
 }

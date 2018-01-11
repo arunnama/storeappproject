@@ -39,42 +39,15 @@ class ColorPickerVC: UIViewController, ColorPickerViewDelegate, ColorPickerViewD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    /*
-    func addColorPicker()
-    {
-        let ColorPicker = ChromaColorPicker(frame:colorPic.frame)
-        print(ColorPicker.center)
-        ColorPicker.delegate = self
-        //ChromaColorPickerDelegate
-        ColorPicker.padding = 5
-        ColorPicker.stroke = 3
-        ColorPicker.hexLabel.textColor = UIColor.white
-        colorPic.addSubview(ColorPicker)
-    }
- */
-    
-    func colorPickerDidChooseColor(_ colorPicker: ChromaColorPicker, color: UIColor){
-       self.view.backgroundColor = color
-    }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
     
     // MARK: - ColorPickerViewDelegate
     
     func colorPickerView(_ colorPickerView: ColorPickerView, didSelectItemAt indexPath: IndexPath) {
        // self.selectedColorView.backgroundColor = colorPickerView.colors[indexPath.item]
         self.view.backgroundColor = colorPickerView.colors[indexPath.item]
+        Settings.sharedInstance.bgColour = colorPickerView.colors[indexPath.item]
+       // navigationController?.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - ColorPickerViewDelegateFlowLayout

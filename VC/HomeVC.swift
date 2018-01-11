@@ -8,14 +8,13 @@
 
 import UIKit
 import SwiftySound
-class HomeVC: UIViewController,homeBgColor {
+class HomeVC: UIViewController{
 
     var mainPulse : LFTPulseAnimation?;
     var innerPulse : LFTPulseAnimation?;
     var isSoundOn : Bool = false;
-    var bgMusic: UIColor
-   
-    private var bgMusic: Sound?
+    var bgMusic: Sound?
+    
     override func loadView(){
         super.loadView()
        
@@ -23,10 +22,18 @@ class HomeVC: UIViewController,homeBgColor {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadPulse()
+        loadTheme();
         view.layer.addSublayer(mainPulse!)
         view.layer.addSublayer(innerPulse!)
         
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadTheme();
+        view.layer.addSublayer(mainPulse!)
+        view.layer.addSublayer(innerPulse!)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -144,6 +151,14 @@ class HomeVC: UIViewController,homeBgColor {
         
     }
     */
+    
+    //
+    func loadTheme()
+    {
+        self.view.backgroundColor = Settings.sharedInstance.bgColour
+       // self.bgMusic =  settingsInstance.bgMusic
+    
+    }
 
 }
 
