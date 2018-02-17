@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		07B3A84B813922A0C8C6C9A1 /* Pods_SleepMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210015878707335A49D8F742 /* Pods_SleepMeUITests.framework */; };
 		3BB72643C9E9E02862F32D2D /* Pods_SleepMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95C88047D025935E1438CE1 /* Pods_SleepMeTests.framework */; };
-		C925BF301FE43DB500AFB357 /* Retreat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C925BF2C1FE43DB300AFB357 /* Retreat.mp3 */; };
-		C925BF311FE43DB500AFB357 /* Go_to_Sleep_My_Little_One.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C925BF2D1FE43DB400AFB357 /* Go_to_Sleep_My_Little_One.mp3 */; };
-		C925BF321FE43DB500AFB357 /* Nevada_City.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C925BF2E1FE43DB400AFB357 /* Nevada_City.mp3 */; };
-		C925BF331FE43DB500AFB357 /* Meditation_Impromptu_02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C925BF2F1FE43DB500AFB357 /* Meditation_Impromptu_02.mp3 */; };
 		C9261DD01FE404C200B2B8EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9261DCF1FE404C200B2B8EB /* AppDelegate.swift */; };
 		C9261DD21FE404C200B2B8EB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9261DD11FE404C200B2B8EB /* HomeVC.swift */; };
 		C9261DD51FE404C200B2B8EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9261DD31FE404C200B2B8EB /* Main.storyboard */; };
@@ -26,15 +22,12 @@
 		C9261E081FE4112C00B2B8EB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9261E071FE4112C00B2B8EB /* Settings.swift */; };
 		C9261E0B1FE416E100B2B8EB /* Music.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9261E091FE416E100B2B8EB /* Music.xcdatamodeld */; };
 		C9261E0D1FE4179D00B2B8EB /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9261E0C1FE4179D00B2B8EB /* AppData.swift */; };
-		C9261E0F1FE434A400B2B8EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9261E0E1FE434A400B2B8EB /* ViewController.swift */; };
-		C9261E141FE435DD00B2B8EB /* cat.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9261E111FE435DC00B2B8EB /* cat.wav */; };
-		C9261E151FE435DD00B2B8EB /* dog.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9261E121FE435DC00B2B8EB /* dog.wav */; };
-		C9261E161FE435DD00B2B8EB /* empty.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9261E131FE435DC00B2B8EB /* empty.wav */; };
+		C93A427120383066005C52AA /* BouncyLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A427020383066005C52AA /* BouncyLayout.framework */; };
+		C93A42C5203841F8005C52AA /* AudioFiles.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C93A42C4203841F8005C52AA /* AudioFiles.xcassets */; };
 		C9AE50291FF7FA3F00DB051A /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE50281FF7FA3F00DB051A /* MainNavigationController.swift */; };
 		C9B10C2C1FF0083800829D2E /* MusicTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B10C2B1FF0083800829D2E /* MusicTypes.swift */; };
+		C9B36C1020382418006FFF00 /* LFTPulseAnimationEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B36C0F20382418006FFF00 /* LFTPulseAnimationEx.swift */; };
 		C9DE5F8C1FE5054D00AA3929 /* ColorPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE5F8B1FE5054D00AA3929 /* ColorPickerVC.swift */; };
-		C9FA38DA1FFD4091000B0BEF /* SquareColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA38D81FFD4090000B0BEF /* SquareColorViewController.swift */; };
-		C9FA38DB1FFD4091000B0BEF /* BrandColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA38D91FFD4091000B0BEF /* BrandColorViewController.swift */; };
 		E9079E2690E2532E2E6CC589 /* Pods_SleepMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 142BAB807C54FE184D46C77A /* Pods_SleepMe.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,10 +56,6 @@
 		468D3B2E8AF8513625AA19B6 /* Pods-SleepMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepMe/Pods-SleepMe.debug.xcconfig"; sourceTree = "<group>"; };
 		7D15B3C9985E3DABDE8A6984 /* Pods-SleepMeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepMeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepMeUITests/Pods-SleepMeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BD56585FEF1C34CFE46A5CD8 /* Pods-SleepMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepMeTests/Pods-SleepMeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C925BF2C1FE43DB300AFB357 /* Retreat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Retreat.mp3; sourceTree = "<group>"; };
-		C925BF2D1FE43DB400AFB357 /* Go_to_Sleep_My_Little_One.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Go_to_Sleep_My_Little_One.mp3; sourceTree = "<group>"; };
-		C925BF2E1FE43DB400AFB357 /* Nevada_City.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Nevada_City.mp3; sourceTree = "<group>"; };
-		C925BF2F1FE43DB500AFB357 /* Meditation_Impromptu_02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Meditation_Impromptu_02.mp3; sourceTree = "<group>"; };
 		C9261DCC1FE404C200B2B8EB /* SleepMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9261DCF1FE404C200B2B8EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9261DD11FE404C200B2B8EB /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -86,15 +75,12 @@
 		C9261E071FE4112C00B2B8EB /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C9261E0A1FE416E100B2B8EB /* Music.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Music.xcdatamodel; sourceTree = "<group>"; };
 		C9261E0C1FE4179D00B2B8EB /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
-		C9261E0E1FE434A400B2B8EB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C9261E111FE435DC00B2B8EB /* cat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cat.wav; sourceTree = "<group>"; };
-		C9261E121FE435DC00B2B8EB /* dog.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dog.wav; sourceTree = "<group>"; };
-		C9261E131FE435DC00B2B8EB /* empty.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = empty.wav; sourceTree = "<group>"; };
+		C93A427020383066005C52AA /* BouncyLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BouncyLayout.framework; sourceTree = "<group>"; };
+		C93A42C4203841F8005C52AA /* AudioFiles.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AudioFiles.xcassets; sourceTree = "<group>"; };
 		C9AE50281FF7FA3F00DB051A /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		C9B10C2B1FF0083800829D2E /* MusicTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTypes.swift; sourceTree = "<group>"; };
+		C9B36C0F20382418006FFF00 /* LFTPulseAnimationEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFTPulseAnimationEx.swift; sourceTree = "<group>"; };
 		C9DE5F8B1FE5054D00AA3929 /* ColorPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerVC.swift; sourceTree = "<group>"; };
-		C9FA38D81FFD4090000B0BEF /* SquareColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareColorViewController.swift; sourceTree = "<group>"; };
-		C9FA38D91FFD4091000B0BEF /* BrandColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandColorViewController.swift; sourceTree = "<group>"; };
 		DAF193633AB426782F71FF03 /* Pods-SleepMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepMeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepMeUITests/Pods-SleepMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F95C88047D025935E1438CE1 /* Pods_SleepMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93A427120383066005C52AA /* BouncyLayout.framework in Frameworks */,
 				E9079E2690E2532E2E6CC589 /* Pods_SleepMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,6 +117,7 @@
 		6834048B1F3DE2EB2FC2355B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C93A427020383066005C52AA /* BouncyLayout.framework */,
 				142BAB807C54FE184D46C77A /* Pods_SleepMe.framework */,
 				F95C88047D025935E1438CE1 /* Pods_SleepMeTests.framework */,
 				210015878707335A49D8F742 /* Pods_SleepMeUITests.framework */,
@@ -211,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				C9261E001FE4078D00B2B8EB /* LFTPulseAnimation.swift */,
+				C9B36C0F20382418006FFF00 /* LFTPulseAnimationEx.swift */,
 			);
 			path = PluseAnimation;
 			sourceTree = "<group>";
@@ -218,9 +207,6 @@
 		C9261E031FE4080900B2B8EB /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				C9FA38D91FFD4091000B0BEF /* BrandColorViewController.swift */,
-				C9FA38D81FFD4090000B0BEF /* SquareColorViewController.swift */,
-				C9261E0E1FE434A400B2B8EB /* ViewController.swift */,
 				C9261DD11FE404C200B2B8EB /* HomeVC.swift */,
 				C9261E041FE410EE00B2B8EB /* SettingsVC.swift */,
 				C9DE5F8B1FE5054D00AA3929 /* ColorPickerVC.swift */,
@@ -243,13 +229,7 @@
 		C9261E101FE435DC00B2B8EB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				C925BF2D1FE43DB400AFB357 /* Go_to_Sleep_My_Little_One.mp3 */,
-				C925BF2F1FE43DB500AFB357 /* Meditation_Impromptu_02.mp3 */,
-				C925BF2E1FE43DB400AFB357 /* Nevada_City.mp3 */,
-				C925BF2C1FE43DB300AFB357 /* Retreat.mp3 */,
-				C9261E111FE435DC00B2B8EB /* cat.wav */,
-				C9261E121FE435DC00B2B8EB /* dog.wav */,
-				C9261E131FE435DC00B2B8EB /* empty.wav */,
+				C93A42C4203841F8005C52AA /* AudioFiles.xcassets */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -372,14 +352,8 @@
 			files = (
 				C9261DDD1FE404C200B2B8EB /* LaunchScreen.storyboard in Resources */,
 				C9261DDA1FE404C200B2B8EB /* Assets.xcassets in Resources */,
-				C925BF321FE43DB500AFB357 /* Nevada_City.mp3 in Resources */,
-				C9261E161FE435DD00B2B8EB /* empty.wav in Resources */,
+				C93A42C5203841F8005C52AA /* AudioFiles.xcassets in Resources */,
 				C9261DD51FE404C200B2B8EB /* Main.storyboard in Resources */,
-				C9261E141FE435DD00B2B8EB /* cat.wav in Resources */,
-				C9261E151FE435DD00B2B8EB /* dog.wav in Resources */,
-				C925BF311FE43DB500AFB357 /* Go_to_Sleep_My_Little_One.mp3 in Resources */,
-				C925BF331FE43DB500AFB357 /* Meditation_Impromptu_02.mp3 in Resources */,
-				C925BF301FE43DB500AFB357 /* Retreat.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,15 +538,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9FA38DA1FFD4091000B0BEF /* SquareColorViewController.swift in Sources */,
+				C9B36C1020382418006FFF00 /* LFTPulseAnimationEx.swift in Sources */,
 				C9261DD21FE404C200B2B8EB /* HomeVC.swift in Sources */,
 				C9261E0B1FE416E100B2B8EB /* Music.xcdatamodeld in Sources */,
 				C9261E081FE4112C00B2B8EB /* Settings.swift in Sources */,
 				C9AE50291FF7FA3F00DB051A /* MainNavigationController.swift in Sources */,
-				C9261E0F1FE434A400B2B8EB /* ViewController.swift in Sources */,
 				C9261E0D1FE4179D00B2B8EB /* AppData.swift in Sources */,
 				C9B10C2C1FF0083800829D2E /* MusicTypes.swift in Sources */,
-				C9FA38DB1FFD4091000B0BEF /* BrandColorViewController.swift in Sources */,
 				C9261E011FE4078D00B2B8EB /* LFTPulseAnimation.swift in Sources */,
 				C9DE5F8C1FE5054D00AA3929 /* ColorPickerVC.swift in Sources */,
 				C9261DD81FE404C200B2B8EB /* SleepMe.xcdatamodeld in Sources */,
@@ -746,6 +718,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5AW47F9A3P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SleepMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Yadsri.SleepMe;
@@ -762,6 +738,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5AW47F9A3P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SleepMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Yadsri.SleepMe;

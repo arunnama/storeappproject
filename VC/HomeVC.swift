@@ -8,8 +8,9 @@
 
 import UIKit
 import SwiftySound
-class HomeVC: UIViewController{
 
+class HomeVC: UIViewController{
+    
     var mainPulse : LFTPulseAnimation?;
     var innerPulse : LFTPulseAnimation?;
     var isSoundOn : Bool = false;
@@ -17,16 +18,13 @@ class HomeVC: UIViewController{
     
     override func loadView(){
         super.loadView()
-       
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         loadPulse()
-        loadTheme();
         view.layer.addSublayer(mainPulse!)
         view.layer.addSublayer(innerPulse!)
-        
-        // Do any additional setup after loading the view, typically from a nib.
+        view.backgroundColor = UIColor.flatGreenDark;
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,12 +33,12 @@ class HomeVC: UIViewController{
         view.layer.addSublayer(mainPulse!)
         view.layer.addSublayer(innerPulse!)
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         registerGestures()
         loadMusic()
-
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,7 +52,6 @@ class HomeVC: UIViewController{
             bgMusic = Sound(url: musicUrl)
         }
         
-        //  Sound.play(file: "Go_to_Sleep_My_Little_One", fileExtension: "mp3", numberOfLoops: -1) = true;
         isSoundOn = true;
         bgMusic?.play()
         
@@ -62,104 +59,72 @@ class HomeVC: UIViewController{
     func loadPulse()
     {
         mainPulse = LFTPulseAnimation(radius: self.view.frame.width/2, position:self.view.center)
-        mainPulse?.animationDuration = 4.0
-        
+        mainPulse?.animationDuration = 1.0
         innerPulse = LFTPulseAnimation(radius: self.view.frame.width/3, position:self.view.center)
         innerPulse?.animationDuration = 4.0
-        
-   }
-   
+    }
+    
     func registerGestures()
     {
         let doubleTap = UITapGestureRecognizer()
         doubleTap.numberOfTapsRequired = 2
         doubleTap.addTarget(self, action: #selector(self.doubleTapHandler))
         self.view.addGestureRecognizer(doubleTap);
-        
         let singleTap = UITapGestureRecognizer()
         singleTap.numberOfTapsRequired = 1
         singleTap.addTarget(self, action: #selector(self.singleTapHandler))
         self.view.addGestureRecognizer(singleTap);
-        
         let swipeRight = UISwipeGestureRecognizer(target: self, action: nil)
         swipeRight.direction = UISwipeGestureRecognizerDirection.right
         self.view.addGestureRecognizer(swipeRight)
-        
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector((volumeDown)))
         swipeDown.direction = UISwipeGestureRecognizerDirection.down
         self.view.addGestureRecognizer(swipeDown)
-        
-        
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(volumeUp))
         swipeDown.direction = UISwipeGestureRecognizerDirection.up
         self.view.addGestureRecognizer(swipeUp)
-        
     }
     
     @objc func singleTapHandler() {
-       
         if(isSoundOn){
-             isSoundOn = false
-             bgMusic?.stop();
+            isSoundOn = false
+            bgMusic?.stop();
         }
         else{
             isSoundOn = true;
             bgMusic?.play(numberOfLoops: -1, completion: nil)
         }
-       
-        
     }
     
     @objc func volumeUp()
     {
         bgMusic?.volume +=  ((bgMusic?.volume)! / 100) * 10
-        
     }
     
     @objc func volumeDown()
     {
         bgMusic?.volume -=  ((bgMusic?.volume)! / 100) * 10
-        
     }
     @objc func doubleTapHandler()
     {
         let mainNavController: MainNavigationController  = storyboard?.instantiateViewController(withIdentifier: "MainNavigationController") as! MainNavigationController
-        present(mainNavController, animated: true, completion: nil)
- 
-    }
-   
-    /*
-    func initializeGestureRecognizer(actionView:UIView)
-    {
-        //Tap Gesture
-        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("recognizeTapGesture:"))
-        self.view.addGestureRecognizer(tapGesture)
-        //Long Press Gesture
-        var longPressedGesture: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: Selector(("recognizeLongPressedGesture:")))
-        actionView.addGestureRecognizer(longPressedGesture)
-        //Rotate Gesture
-        let rotateGesture: UIRotationGestureRecognizer = UIRotationGestureRecognizer(target: self, action: Selector("recognizeRotateGesture:"))
-        actionView.addGestureRecognizer(rotateGesture)
-        //Pinch Gesture
-        let pinchGesture: UIPinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: Selector(("recognizePinchGesture:")))
-        actionView.addGestureRecognizer(pinchGesture)
-        //Pan Gesture
-        let panGesture: UIPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: Selector("recognizePanGesture:"))
-        panGesture.minimumNumberOfTouches = 1
-        panGesture.maximumNumberOfTouches = 1
-        actionView.addGestureRecognizer(panGesture)
+        self.present(mainNavController, animated: true, completion: nil)
         
     }
-    */
     
-    //
     func loadTheme()
     {
         self.view.backgroundColor = Settings.sharedInstance.bgColour
-       // self.bgMusic =  settingsInstance.bgMusic
-    
+        mainPulse?.setCircleColor(color: Settings.sharedInstance.outerCircleColor)
+        innerPulse?.setCircleColor(color: Settings.sharedInstance.innerCircleColor)
+        
     }
-
+    
+    func setMusic()
+    {
+        
+    }
+    
 }
 
 

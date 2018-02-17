@@ -18,20 +18,19 @@ class ColorPickerVC: UIViewController, ColorPickerViewDelegate, ColorPickerViewD
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        colorPic.backgroundColor = UIColor.red
+        colorPic.backgroundColor = UIColor.black
         colorPickerView.delegate = self
         colorPickerView.layoutDelegate = self
         colorPickerView.style = .circle
         colorPickerView.selectionStyle = .check
         colorPickerView.isSelectedColorTappable = false
         colorPickerView.preselectedIndex = colorPickerView.colors.indices.first
-        
+        navigationController?.navigationItem.title = "Colors"
         view.backgroundColor = colorPickerView.colors.first
     }
 
     override func viewWillAppear(_ animated: Bool) {
          super.viewWillAppear(animated);
-         self.navigationController?.isNavigationBarHidden = false;
         // addColorPicker()
     }
     
@@ -41,7 +40,6 @@ class ColorPickerVC: UIViewController, ColorPickerViewDelegate, ColorPickerViewD
     }
     
     // MARK: - ColorPickerViewDelegate
-    
     func colorPickerView(_ colorPickerView: ColorPickerView, didSelectItemAt indexPath: IndexPath) {
        // self.selectedColorView.backgroundColor = colorPickerView.colors[indexPath.item]
         self.view.backgroundColor = colorPickerView.colors[indexPath.item]
@@ -51,7 +49,6 @@ class ColorPickerVC: UIViewController, ColorPickerViewDelegate, ColorPickerViewD
     }
     
     // MARK: - ColorPickerViewDelegateFlowLayout
-    
     func colorPickerView(_ colorPickerView: ColorPickerView, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 48, height: 48)
     }

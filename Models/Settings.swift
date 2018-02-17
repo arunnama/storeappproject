@@ -11,13 +11,50 @@ import UIKit
 import AVFoundation
 import ChameleonFramework
 
+enum Themes {
+    case BeachNight
+    case Green
+    case MoonLight
+    case Default
+}
+
 final class Settings
 {
     static let sharedInstance = Settings()
-    var bgColour : UIColor = FlatSkyBlueDark()
-    var bgMusic:String = AppData.musicTypes()[0]
+    var bgColour : UIColor;
+    var bgMusic:String
     var pulseSettings : LFTPulseAnimation?
-    
-    private init(){}
-    
+    var outerCircleColor : UIColor
+    var innerCircleColor : UIColor
+    var theme:Themes;
+    private init(){
+        bgColour = UIColor.flatGreenDark
+        bgMusic = AppData.musicTypes(name:nil);
+        theme = .Default;
+        outerCircleColor = UIColor.flatBlack
+        innerCircleColor = UIColor.gray
+    }
+
+    func themes(theme:Themes)
+    {
+        switch theme {
+        case .BeachNight:
+            bgColour = UIColor.flatGreenDark;
+            bgMusic = AppData.musicTypes(name: "Green");
+            break
+        case .Default:
+            bgColour = UIColor.flatGreenDark;
+            bgMusic = AppData.musicTypes(name: "Green");
+            break
+        case .Green:
+            bgColour = UIColor.flatGreenDark;
+            bgMusic = AppData.musicTypes(name: "Green");
+            break
+        case .MoonLight:
+            bgColour = UIColor.flatGreenDark;
+            bgMusic = AppData.musicTypes(name: "Green");
+            break
+        }
+    }
 }
+

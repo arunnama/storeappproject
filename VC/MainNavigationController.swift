@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BouncyLayout
 
 class MainNavigationController: UINavigationController {
 

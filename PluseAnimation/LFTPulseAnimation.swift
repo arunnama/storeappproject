@@ -19,6 +19,7 @@ class LFTPulseAnimation: CALayer {
     var useTimingFunction:      Bool = true
     var animationGroup:         CAAnimationGroup = CAAnimationGroup()
     var repetitions:            Float = Float.infinity
+    var circleColor:UIColor = UIColor.flatBlack
 
     // Need to implement that, because otherwise it can't find
     // the constructor init(layer:AnyObject!)
@@ -31,7 +32,7 @@ class LFTPulseAnimation: CALayer {
         super.init()
         self.contentsScale = UIScreen.main.scale
         self.opacity = 0.0
-        self.backgroundColor = UIColor.blue.cgColor
+        //self.backgroundColor = UIColor.blue.cgColor
         self.radius = radius;
         self.repetitions = repeatCount;
         self.position = position
@@ -61,6 +62,8 @@ class LFTPulseAnimation: CALayer {
         self.cornerRadius = self.radius
         self.position = tempPos
     }
+    
+    
     
     func setupAnimationGroup() {
         self.animationGroup = CAAnimationGroup()

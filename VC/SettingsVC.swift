@@ -14,13 +14,13 @@ class SettingsVC: UITableViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(goHomePage))
-        navigationItem.rightBarButtonItem = backItem
+        self.view.backgroundColor = UIColor.flatBlue;
+        tableView.tableFooterView = UIView();
+        tableView.backgroundColor = UIColor.flatGreenDark;
     }
     
     @objc func goHomePage(){
         navigationController?.dismiss(animated: true, completion: nil)
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,7 +28,8 @@ class SettingsVC: UITableViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+         cell.backgroundColor = UIColor.flatCoffee;
     }
+    
 }

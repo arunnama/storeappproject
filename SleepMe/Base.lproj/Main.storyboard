@@ -31,14 +31,15 @@
         <scene sceneID="0i5-1U-0rA">
             <objects>
                 <tableViewController restorationIdentifier="SettingsVC" storyboardIdentifier="SettingsVC" title="Settings" id="BBB-T2-FGR" customClass="SettingsVC" customModule="SleepMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="b5P-TW-pqE">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" id="b5P-TW-pqE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="YzU-Ch-Y3e">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="checkmark" textLabel="Dck-yr-eOx" detailTextLabel="ecL-6T-f27" style="IBUITableViewCellStyleValue1" id="qQh-9s-Hnx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" showsReorderControl="YES" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="checkmark" textLabel="Dck-yr-eOx" detailTextLabel="ecL-6T-f27" style="IBUITableViewCellStyleValue1" id="qQh-9s-Hnx">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qQh-9s-Hnx" id="xwp-GN-QNT">
@@ -52,8 +53,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ecL-6T-f27">
-                                                    <rect key="frame" x="296" y="12" width="44" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ecL-6T-f27">
+                                                    <rect key="frame" x="335.5" y="12" width="4.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -62,7 +63,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="rFG-cN-C1r" kind="show" action="showDetailViewController:sender:" id="19W-Dd-nF3"/>
+                                            <segue destination="rFG-cN-C1r" kind="show" id="19W-Dd-nF3"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="RWv-95-k1C" detailTextLabel="kd6-dX-b4p" style="IBUITableViewCellStyleValue1" id="MYj-FE-hwB">
@@ -79,8 +80,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kd6-dX-b4p">
-                                                    <rect key="frame" x="296" y="12" width="44" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kd6-dX-b4p">
+                                                    <rect key="frame" x="335.5" y="12" width="4.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -88,6 +89,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <segue destination="Zfz-a5-Vyh" kind="show" id="zGJ-Zr-KRZ"/>
                                         </connections>
@@ -106,8 +108,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="scN-Ql-DDd">
-                                                    <rect key="frame" x="296" y="12" width="44" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="scN-Ql-DDd">
+                                                    <rect key="frame" x="335.5" y="12" width="4.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -116,7 +118,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="rFG-cN-C1r" kind="show" action="showDetailViewController:sender:" id="69c-DF-F1i"/>
+                                            <segue destination="rFG-cN-C1r" kind="show" id="n8a-KH-d7G"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -162,7 +164,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QLP-bL-T2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2116" y="127"/>
+            <point key="canvasLocation" x="708" y="72"/>
         </scene>
         <!--Pic The Color-->
         <scene sceneID="QAW-5z-c0i">
@@ -179,7 +181,7 @@
                                 </constraints>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0e1-8s-ULa" firstAttribute="centerY" secondItem="KgF-7h-wA2" secondAttribute="centerY" id="BsN-y8-qre"/>
                             <constraint firstItem="0e1-8s-ULa" firstAttribute="leading" secondItem="lci-gj-WAV" secondAttribute="leading" constant="10" id="FdM-rS-Nq4"/>
@@ -200,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tvu-pb-ZxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2116" y="-702"/>
+            <point key="canvasLocation" x="1612" y="-702"/>
         </scene>
         <!--Settings-->
         <scene sceneID="xM4-kT-YHf">
@@ -223,6 +225,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="19W-Dd-nF3"/>
+        <segue reference="n8a-KH-d7G"/>
     </inferredMetricsTieBreakers>
 </document>
