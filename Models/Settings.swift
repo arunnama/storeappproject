@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import AVFoundation
 import ChameleonFramework
+import SwiftySound
 
 enum Themes {
     case BeachNight
@@ -22,14 +23,25 @@ final class Settings
 {
     static let sharedInstance = Settings()
     var bgColour : UIColor;
-    var bgMusic:String
+    var bgMusicSound:Sound?
+    var bgMusicName:String {
+        didSet{
+            if let bgMusicSoundUrl = Bundle.main.url(forResource:bgMusicName, withExtension: "") {
+                bgMusicSound = Sound(url: bgMusicSoundUrl)
+            }
+        }
+    }
+   
     var pulseSettings : LFTPulseAnimation?
     var outerCircleColor : UIColor
     var innerCircleColor : UIColor
     var theme:Themes;
     private init(){
         bgColour = UIColor.flatGreenDark
-        bgMusic = AppData.musicTypes(name:nil);
+        bgMusicName = audioFiles[0];
+        if let bgMusicSoundUrl = Bundle.main.url(forResource:bgMusicName, withExtension: "") {
+            bgMusicSound = Sound(url: bgMusicSoundUrl)
+        }
         theme = .Default;
         outerCircleColor = UIColor.flatBlack
         innerCircleColor = UIColor.gray
@@ -40,21 +52,19 @@ final class Settings
         switch theme {
         case .BeachNight:
             bgColour = UIColor.flatGreenDark;
-            bgMusic = AppData.musicTypes(name: "Green");
             break
         case .Default:
             bgColour = UIColor.flatGreenDark;
-            bgMusic = AppData.musicTypes(name: "Green");
             break
         case .Green:
             bgColour = UIColor.flatGreenDark;
-            bgMusic = AppData.musicTypes(name: "Green");
             break
         case .MoonLight:
             bgColour = UIColor.flatGreenDark;
-            bgMusic = AppData.musicTypes(name: "Green");
             break
         }
     }
+    
+    
 }
 

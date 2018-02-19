@@ -15,10 +15,12 @@ class ColorPickerVC: UIViewController, ColorPickerViewDelegate, ColorPickerViewD
 
     @IBOutlet weak var colorPickerView: ColorPickerView!
     @IBOutlet weak var colorPic: UIView!
-   
+    var colorSelector: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        colorPic.backgroundColor = UIColor.black
+        view.backgroundColor = Settings.sharedInstance.bgColour
+        colorPic.backgroundColor = Settings.sharedInstance.bgColour
         colorPickerView.delegate = self
         colorPickerView.layoutDelegate = self
         colorPickerView.style = .circle
@@ -26,7 +28,6 @@ class ColorPickerVC: UIViewController, ColorPickerViewDelegate, ColorPickerViewD
         colorPickerView.isSelectedColorTappable = false
         colorPickerView.preselectedIndex = colorPickerView.colors.indices.first
         navigationController?.navigationItem.title = "Colors"
-        view.backgroundColor = colorPickerView.colors.first
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -42,8 +43,15 @@ class ColorPickerVC: UIViewController, ColorPickerViewDelegate, ColorPickerViewD
     // MARK: - ColorPickerViewDelegate
     func colorPickerView(_ colorPickerView: ColorPickerView, didSelectItemAt indexPath: IndexPath) {
        // self.selectedColorView.backgroundColor = colorPickerView.colors[indexPath.item]
+        
         self.view.backgroundColor = colorPickerView.colors[indexPath.item]
-        Settings.sharedInstance.bgColour = colorPickerView.colors[indexPath.item]
+        if(colorSelector == "BG_COLOR"){
+            Settings.sharedInstance.bgColour = colorPickerView.colors[indexPath.item]
+        }
+        else
+        {
+            Settings.sharedInstance.outerCircleColor = colorPickerView.colors[indexPath.item]
+        }
        // navigationController?.dismiss(animated: true, completion: nil)
         self.dismiss(animated: true, completion: nil)
     }

@@ -8,6 +8,8 @@
 
 import Foundation
 
+let audioFiles:Array = ["Go_to_Sleep_My_Little_One.mp3","Meditation_Impromptu_02.mp3","Nevada_City.mp3"];
+
 class AppData{
     
     static func musicTypes(name:String?)->String{

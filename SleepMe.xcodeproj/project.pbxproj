@@ -22,8 +22,9 @@
 		C9261E081FE4112C00B2B8EB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9261E071FE4112C00B2B8EB /* Settings.swift */; };
 		C9261E0B1FE416E100B2B8EB /* Music.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9261E091FE416E100B2B8EB /* Music.xcdatamodeld */; };
 		C9261E0D1FE4179D00B2B8EB /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9261E0C1FE4179D00B2B8EB /* AppData.swift */; };
-		C93A427120383066005C52AA /* BouncyLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A427020383066005C52AA /* BouncyLayout.framework */; };
-		C93A42C5203841F8005C52AA /* AudioFiles.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C93A42C4203841F8005C52AA /* AudioFiles.xcassets */; };
+		C93A42CB203844CA005C52AA /* Go_to_Sleep_My_Little_One.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C93A42C7203844C8005C52AA /* Go_to_Sleep_My_Little_One.mp3 */; };
+		C93A42CD203844CA005C52AA /* Nevada_City.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C93A42C9203844C9005C52AA /* Nevada_City.mp3 */; };
+		C93A42CE203844CA005C52AA /* Meditation_Impromptu_02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C93A42CA203844CA005C52AA /* Meditation_Impromptu_02.mp3 */; };
 		C9AE50291FF7FA3F00DB051A /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE50281FF7FA3F00DB051A /* MainNavigationController.swift */; };
 		C9B10C2C1FF0083800829D2E /* MusicTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B10C2B1FF0083800829D2E /* MusicTypes.swift */; };
 		C9B36C1020382418006FFF00 /* LFTPulseAnimationEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B36C0F20382418006FFF00 /* LFTPulseAnimationEx.swift */; };
@@ -76,7 +77,9 @@
 		C9261E0A1FE416E100B2B8EB /* Music.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Music.xcdatamodel; sourceTree = "<group>"; };
 		C9261E0C1FE4179D00B2B8EB /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		C93A427020383066005C52AA /* BouncyLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BouncyLayout.framework; sourceTree = "<group>"; };
-		C93A42C4203841F8005C52AA /* AudioFiles.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AudioFiles.xcassets; sourceTree = "<group>"; };
+		C93A42C7203844C8005C52AA /* Go_to_Sleep_My_Little_One.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Go_to_Sleep_My_Little_One.mp3; sourceTree = "<group>"; };
+		C93A42C9203844C9005C52AA /* Nevada_City.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Nevada_City.mp3; sourceTree = "<group>"; };
+		C93A42CA203844CA005C52AA /* Meditation_Impromptu_02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Meditation_Impromptu_02.mp3; sourceTree = "<group>"; };
 		C9AE50281FF7FA3F00DB051A /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		C9B10C2B1FF0083800829D2E /* MusicTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTypes.swift; sourceTree = "<group>"; };
 		C9B36C0F20382418006FFF00 /* LFTPulseAnimationEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFTPulseAnimationEx.swift; sourceTree = "<group>"; };
@@ -90,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C93A427120383066005C52AA /* BouncyLayout.framework in Frameworks */,
 				E9079E2690E2532E2E6CC589 /* Pods_SleepMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,7 +143,7 @@
 		C9261DC31FE404C200B2B8EB = {
 			isa = PBXGroup;
 			children = (
-				C9261E101FE435DC00B2B8EB /* Sounds */,
+				C93A42C6203844A3005C52AA /* Sounds */,
 				C9261E061FE4110600B2B8EB /* Models */,
 				C9261E031FE4080900B2B8EB /* VC */,
 				C9261E021FE4079300B2B8EB /* PluseAnimation */,
@@ -226,10 +228,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		C9261E101FE435DC00B2B8EB /* Sounds */ = {
+		C93A42C6203844A3005C52AA /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				C93A42C4203841F8005C52AA /* AudioFiles.xcassets */,
+				C93A42C7203844C8005C52AA /* Go_to_Sleep_My_Little_One.mp3 */,
+				C93A42CA203844CA005C52AA /* Meditation_Impromptu_02.mp3 */,
+				C93A42C9203844C9005C52AA /* Nevada_City.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -351,8 +355,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9261DDD1FE404C200B2B8EB /* LaunchScreen.storyboard in Resources */,
+				C93A42CE203844CA005C52AA /* Meditation_Impromptu_02.mp3 in Resources */,
+				C93A42CD203844CA005C52AA /* Nevada_City.mp3 in Resources */,
 				C9261DDA1FE404C200B2B8EB /* Assets.xcassets in Resources */,
-				C93A42C5203841F8005C52AA /* AudioFiles.xcassets in Resources */,
+				C93A42CB203844CA005C52AA /* Go_to_Sleep_My_Little_One.mp3 in Resources */,
 				C9261DD51FE404C200B2B8EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

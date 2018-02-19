@@ -12,7 +12,8 @@ class MusicTypes: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = Settings.sharedInstance.bgColour
+        tableView.tableFooterView = UIView();
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,26 +30,30 @@ class MusicTypes: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        
-        
-        
-        return 0
+        return audioFiles.count;
     }
-
-    /*
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "musicCell")
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "musicCell", for: indexPath)
 
         // Configure the cell...
-
+        cell.textLabel?.text = audioFiles[indexPath.row];
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        
+        Settings.sharedInstance.bgMusicName = audioFiles[indexPath.row]
+        self.dismiss(animated: true, completion: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.

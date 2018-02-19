@@ -13,6 +13,7 @@ class HomeVC: UIViewController{
     
     var mainPulse : LFTPulseAnimation?;
     var innerPulse : LFTPulseAnimation?;
+    var superInnerPulse : LFTPulseAnimation?;
     var isSoundOn : Bool = false;
     var bgMusic: Sound?
     
@@ -22,8 +23,6 @@ class HomeVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         loadPulse()
-        view.layer.addSublayer(mainPulse!)
-        view.layer.addSublayer(innerPulse!)
         view.backgroundColor = UIColor.flatGreenDark;
     }
     
@@ -32,13 +31,20 @@ class HomeVC: UIViewController{
         loadTheme();
         view.layer.addSublayer(mainPulse!)
         view.layer.addSublayer(innerPulse!)
+        view.layer.addSublayer(superInnerPulse!)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         registerGestures()
-        loadMusic()
-        
+
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        mainPulse?.removeFromSuperlayer()
+        innerPulse?.removeFromSuperlayer()
+        superInnerPulse?.removeFromSuperlayer();
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,12 +52,8 @@ class HomeVC: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    func loadMusic()
+    func playMusic()
     {
-        if let musicUrl = Bundle.main.url(forResource: "Go_to_Sleep_My_Little_One", withExtension: "mp3") {
-            bgMusic = Sound(url: musicUrl)
-        }
-        
         isSoundOn = true;
         bgMusic?.play()
         
@@ -59,9 +61,11 @@ class HomeVC: UIViewController{
     func loadPulse()
     {
         mainPulse = LFTPulseAnimation(radius: self.view.frame.width/2, position:self.view.center)
-        mainPulse?.animationDuration = 1.0
+        mainPulse?.animationDuration = 6.0
         innerPulse = LFTPulseAnimation(radius: self.view.frame.width/3, position:self.view.center)
-        innerPulse?.animationDuration = 4.0
+        innerPulse?.animationDuration = 5.0
+        superInnerPulse = LFTPulseAnimation(radius: self.view.frame.width/3, position:self.view.center)
+        superInnerPulse?.animationDuration = 5.0
     }
     
     func registerGestures()
@@ -109,22 +113,19 @@ class HomeVC: UIViewController{
     {
         let mainNavController: MainNavigationController  = storyboard?.instantiateViewController(withIdentifier: "MainNavigationController") as! MainNavigationController
         self.present(mainNavController, animated: true, completion: nil)
-        
     }
     
     func loadTheme()
     {
-        self.view.backgroundColor = Settings.sharedInstance.bgColour
+        view.backgroundColor = Settings.sharedInstance.bgColour
+        bgMusic = Settings.sharedInstance.bgMusicSound
+        bgMusic?.stop();
         mainPulse?.setCircleColor(color: Settings.sharedInstance.outerCircleColor)
         innerPulse?.setCircleColor(color: Settings.sharedInstance.innerCircleColor)
+        superInnerPulse?.setCircleColor(color: UIColor.flatBlackDark)
+        playMusic()
         
     }
-    
-    func setMusic()
-    {
-        
-    }
-    
 }
 
 

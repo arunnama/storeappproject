@@ -14,9 +14,10 @@ class SettingsVC: UITableViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.flatBlue;
+        view.backgroundColor = Settings.sharedInstance.bgColour
         tableView.tableFooterView = UIView();
-        tableView.backgroundColor = UIColor.flatGreenDark;
+        let cancelButton = UIBarButtonItem(title: "Cancel", style:.plain, target: self, action:#selector(goHomePage))
+        navigationItem.rightBarButtonItem = cancelButton
     }
     
     @objc func goHomePage(){
@@ -29,7 +30,22 @@ class SettingsVC: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-         cell.backgroundColor = UIColor.flatCoffee;
+        cell.textLabel?.backgroundColor = UIColor.clear
+        cell.contentView.backgroundColor = UIColor.clear
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "bgColorSegue")
+        {
+            let bgColorVC :ColorPickerVC  = segue.destination as! ColorPickerVC
+            bgColorVC.colorSelector = "BG_COLOR"
+        }
+        else if(segue.identifier == "circleColorSegue")
+        {
+            let bgColorVC :ColorPickerVC  = segue.destination as! ColorPickerVC
+            bgColorVC.colorSelector = "CIRCLE_COLOR"
+        }
     }
     
 }
