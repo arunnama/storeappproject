@@ -8,7 +8,8 @@
 
 import UIKit
 import ChromaColorPicker
-
+let BG_COLOR_SEGUE = "gbColorSegue"
+let CIRCLE_COLOR_SEGUE = "circleColorSegue"
 
 class SettingsVC: UITableViewController{
 
@@ -36,15 +37,15 @@ class SettingsVC: UITableViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if(segue.identifier == "bgColorSegue")
+        if(segue.identifier == CIRCLE_COLOR_SEGUE)
         {
             let bgColorVC :ColorPickerVC  = segue.destination as! ColorPickerVC
-            bgColorVC.colorSelector = "BG_COLOR"
+            bgColorVC.colorSelector = .circleColor
         }
-        else if(segue.identifier == "circleColorSegue")
+        else if(segue.identifier == BG_COLOR_SEGUE)
         {
             let bgColorVC :ColorPickerVC  = segue.destination as! ColorPickerVC
-            bgColorVC.colorSelector = "CIRCLE_COLOR"
+            bgColorVC.colorSelector = .circleColor
         }
     }
     

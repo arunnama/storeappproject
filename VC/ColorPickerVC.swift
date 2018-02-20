@@ -11,11 +11,14 @@ import ChromaColorPicker
 import IGColorPicker
 
 
+public enum SegueIdentifiers:String{
+    case bgColor,circleColor
+}
 class ColorPickerVC: UIViewController, ColorPickerViewDelegate, ColorPickerViewDelegateFlowLayout{
 
     @IBOutlet weak var colorPickerView: ColorPickerView!
     @IBOutlet weak var colorPic: UIView!
-    var colorSelector: String = ""
+    var colorSelector: SegueIdentifiers = .bgColor
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +48,7 @@ class ColorPickerVC: UIViewController, ColorPickerViewDelegate, ColorPickerViewD
        // self.selectedColorView.backgroundColor = colorPickerView.colors[indexPath.item]
         
         self.view.backgroundColor = colorPickerView.colors[indexPath.item]
-        if(colorSelector == "BG_COLOR"){
+        if(colorSelector == .bgColor){
             Settings.sharedInstance.bgColour = colorPickerView.colors[indexPath.item]
         }
         else
