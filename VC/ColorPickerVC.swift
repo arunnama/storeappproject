@@ -16,17 +16,16 @@ public enum SegueIdentifiers:String{
 }
 class ColorPickerVC: UIViewController, ColorPickerViewDelegate, ColorPickerViewDelegateFlowLayout{
 
-    @IBOutlet weak var colorPickerView: ColorPickerView!
-    @IBOutlet weak var colorPic: UIView!
     var colorSelector: SegueIdentifiers = .bgColor
+    
+    @IBOutlet var colorPickerView: ColorPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Settings.sharedInstance.bgColour
-        colorPic.backgroundColor = Settings.sharedInstance.bgColour
         colorPickerView.delegate = self
         colorPickerView.layoutDelegate = self
-        colorPickerView.style = .circle
+        colorPickerView.style = .square
         colorPickerView.selectionStyle = .check
         colorPickerView.isSelectedColorTappable = false
         colorPickerView.preselectedIndex = colorPickerView.colors.indices.first

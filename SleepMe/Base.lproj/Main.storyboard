@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -171,25 +170,10 @@
         <scene sceneID="QAW-5z-c0i">
             <objects>
                 <viewController storyboardIdentifier="colorSelect" title="Pic The Color" extendedLayoutIncludesOpaqueBars="YES" id="rFG-cN-C1r" customClass="ColorPickerVC" customModule="SleepMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KgF-7h-wA2">
+                    <view key="view" contentMode="scaleToFill" id="KgF-7h-wA2" customClass="ColorPickerView" customModule="IGColorPicker">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0e1-8s-ULa" customClass="ColorPickerView" customModule="IGColorPicker">
-                                <rect key="frame" x="10" y="98" width="355" height="355"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="0e1-8s-ULa" secondAttribute="height" multiplier="1:1" id="tNc-71-FXz"/>
-                                </constraints>
-                            </containerView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="0e1-8s-ULa" firstAttribute="centerY" secondItem="KgF-7h-wA2" secondAttribute="centerY" id="BsN-y8-qre"/>
-                            <constraint firstItem="0e1-8s-ULa" firstAttribute="leading" secondItem="lci-gj-WAV" secondAttribute="leading" constant="10" id="FdM-rS-Nq4"/>
-                            <constraint firstItem="0e1-8s-ULa" firstAttribute="centerY" secondItem="KgF-7h-wA2" secondAttribute="centerY" id="TXx-me-yZX"/>
-                            <constraint firstItem="0e1-8s-ULa" firstAttribute="centerX" secondItem="KgF-7h-wA2" secondAttribute="centerX" id="dCz-Xj-YLS"/>
-                            <constraint firstItem="lci-gj-WAV" firstAttribute="trailing" secondItem="0e1-8s-ULa" secondAttribute="trailing" constant="10" id="erT-Hr-iHt"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lci-gj-WAV"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -197,8 +181,7 @@
                         <barButtonItem key="backBarButtonItem" title="Settings" id="zIe-lg-0MX"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="colorPic" destination="0e1-8s-ULa" id="CM2-vV-2Rh"/>
-                        <outlet property="colorPickerView" destination="0e1-8s-ULa" id="FJy-MU-XsL"/>
+                        <outlet property="colorPickerView" destination="KgF-7h-wA2" id="DkG-fQ-Ouj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tvu-pb-ZxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

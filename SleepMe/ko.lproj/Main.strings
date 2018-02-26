@@ -1,0 +1,42 @@
+
+/* Class = "UINavigationItem"; title = "Pic the color"; ObjectID = "1Uq-iK-KU4"; */
+"1Uq-iK-KU4.title" = "색상 선택";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "4gn-hv-kj6"; */
+"4gn-hv-kj6.title" = "Back";
+
+/* Class = "UITableViewController"; title = "Settings"; ObjectID = "BBB-T2-FGR"; */
+"BBB-T2-FGR.title" = "설정";
+
+/* Class = "UILabel"; text = "Background Color"; ObjectID = "Dck-yr-eOx"; */
+"Dck-yr-eOx.text" = "Background Color";
+
+/* Class = "UILabel"; text = "Music Type"; ObjectID = "RWv-95-k1C"; */
+"RWv-95-k1C.text" = "Music Type";
+
+/* Class = "UITableViewController"; title = "Music Types"; ObjectID = "Zfz-a5-Vyh"; */
+"Zfz-a5-Vyh.title" = "Music Types";
+
+/* Class = "UILabel"; text = "Circle Color"; ObjectID = "dnT-yq-wRc"; */
+"dnT-yq-wRc.text" = "Circle Color";
+
+/* Class = "UILabel"; text = " "; ObjectID = "ecL-6T-f27"; */
+"ecL-6T-f27.text" = " ";
+
+/* Class = "UILabel"; text = " "; ObjectID = "kd6-dX-b4p"; */
+"kd6-dX-b4p.text" = " ";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "qPf-vM-fX1"; */
+"qPf-vM-fX1.title" = "Settings";
+
+/* Class = "UIViewController"; title = "Pic The Color"; ObjectID = "rFG-cN-C1r"; */
+"rFG-cN-C1r.title" = "Pic The Color";
+
+/* Class = "UILabel"; text = " "; ObjectID = "scN-Ql-DDd"; */
+"scN-Ql-DDd.text" = " ";
+
+/* Class = "UIBarButtonItem"; title = "Settings"; ObjectID = "zIe-lg-0MX"; */
+"zIe-lg-0MX.title" = "Settings";
+
+/* Class = "UINavigationController"; title = "Settings"; ObjectID = "zdb-zO-8me"; */
+"zdb-zO-8me.title" = "Settings";
